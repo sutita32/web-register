@@ -1,0 +1,8 @@
+div.menu_bar {
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

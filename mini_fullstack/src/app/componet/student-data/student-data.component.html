@@ -1,0 +1,42 @@
+<title>Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Newsreader:wght@200;400&family=Prompt:wght@300;400&display=swap" rel="stylesheet">
+
+<body>
+    <header class="Top_Header">
+
+        <div class="Logo">
+            <img src="https://elizajann.files.wordpress.com/2014/12/img_2134.png">
+        </div>
+        <div class="Bot">
+            <div class="Top_Title">
+                <h1><b>ระบบสารสนเทศ</b></h1><span>เพื่องานลงทะเบียนนักศึกษา</span>
+
+
+            </div>
+            <div class="Under_Title">KMUTNB REGISRATION INFORMATION SYSTEM</div>
+
+        </div>
+
+
+    </header>
+    <div class="Content">
+        <h3 style="font-size: 17px; text-align: center;">ผู้ใช้ : {{stdlg.std_name}} </h3>
+
+        <nav class="Nav_Button">
+            <a routerLink="/AddCourse">ลงวิชาเรียน</a>&nbsp; &nbsp;
+            <a routerLink="/UnsetCourse">ถอนวิชาเรียน</a>&nbsp; &nbsp;
+            <a routerLink="/RegisResult">ผลลงทะเบียน</a>&nbsp; &nbsp;
+            <a routerLink="/StudentData">ข้อมูลนักศึกษา</a>&nbsp; &nbsp;
+            <a routerLink="/Student">ออกจากระบบ</a>
+        </nav>
+        <section class="Content_Space" style="font-size: 17px; text-align: center;">
+            <div id="Content_Title">ข้อมูลนักศึกษา </div>
+
+            <div id="Content">รหัสนักศึกษา : {{stdlg.std_id}}</div>
+            <div id="Content">ชื่อ : {{stdlg.std_name}}</div>
+            <div id="Content">คณะ : {{stdlg.std_major}} </div>
+            <div id="Content">สาขา :{{stdlg.std_branch}} </div>
+            <div id="Content">เพศ : {{stdlg.std_sex}} </div>
+        </section>
+    </div>
+</body>

@@ -1,0 +1,62 @@
+<title>รายชื่อนักศึกษา</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Newsreader:wght@200;400&family=Prompt:wght@300;400&display=swap" rel="stylesheet">
+
+<body>
+    <header class="Top_Header">
+
+        <div class="Logo">
+            <img src="https://elizajann.files.wordpress.com/2014/12/img_2134.png">
+        </div>
+        <div class="Bot">
+            <div class="Top_Title">
+                <h1><b>ระบบสารสนเทศ</b></h1><span>เพื่องานลงทะเบียนนักศึกษา</span>
+
+            </div>
+            <div class="Under_Title">HUWW REGISRATION INFORMATION SYSTEM</div>
+        </div>
+
+
+    </header>
+    <div class="Content">
+        <h3 style="font-size: 17px; text-align: center;">ผู้ใช้ : {{teach.Teach_name}} </h3>
+        <!-- <nav class="Nav_Button">
+            <a routerLink="/AddCourse">ลงวิชาเรียน</a>&nbsp; | &nbsp;
+            <a routerLink="/UnsetCourse">ถอนวิชาเรียน</a>&nbsp; | &nbsp;
+            <a routerLink="/RegisResult">ผลลงทะเบียน</a>&nbsp; | &nbsp;
+            <a routerLink="/Timetable">ตารางเรียน</a>&nbsp; | &nbsp;
+            <a routerLink="/StudentData">ข้อมูลนักศึกษา</a>&nbsp; | &nbsp;
+            <a routerLink="">ออกจากระบบ</a>
+        </nav> -->
+        <section class="Content_Space" style="text-align: center;">
+
+
+
+            <div id="Content_Title">รายชื่อนักศึกษา</div>
+            <div class="Table">
+                <table *ngFor="let f of table">
+                    <thead>
+
+                        <th> ลำดับ </th>
+                        <th> ตอน </th>
+                        <th> รหัสนักศึกษา </th>
+                        <th> ชื่อ - สกุล </th>
+                        <th> สาขา </th>
+
+                    </thead>
+                    <tr>
+                        <td data-labe="รหัสวิชา">{{f.course_id}}</td>
+                        <td data-labe="ตอน">{{f.class_name}}</td>
+                        <td data-labe="รหัสนักศึกษา">{{f.std_id}}</td>
+                        <td data-labe="ชื่อ - สกุล">{{f.std_name}}</td>
+                        <td data-labe="สาขา"> {{f.std_branch}}</td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+        </section>
+    </div>
+</body>

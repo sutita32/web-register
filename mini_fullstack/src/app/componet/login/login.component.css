@@ -1,0 +1,128 @@
+/*buttom*/
+
+#Login_Button {
+    background: linear-gradient(to bottom, #e3c117 5%, #f2ab1e 100%);
+    background-color: #f0c911;
+    border-radius: 15px;
+    border: 1px solid #e65f44;
+    display: inline-block;
+    cursor: pointer;
+    color: #070707;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 7px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ded17c;
+}
+
+#Login_Button:hover {
+    background: linear-gradient(to bottom, #f3e1bc 5%, #f7e37f 100%);
+    background-color: #fdce70;
+    color: rgb(235, 60, 60);
+}
+
+#Login_Button:active {
+    position: relative;
+    top: 1px;
+}
+
+.Content1 a {
+    font-family: 'Harry Potter', sans-serif;
+}
+
+
+/*login*/
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(../../../img/bg11.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.Content {
+    margin: auto;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.Content1>a {
+    color: rgb(255, 243, 234);
+    font-size: 45px;
+    filter: opacity(100%);
+    text-decoration: none;
+}
+
+.Login_Space {
+    background-color: seashell;
+    filter: opacity(100%);
+    margin: 60px auto;
+    width: 40%;
+    border-radius: 20px;
+    padding: 2% 0px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.Login_Space .Form_Title {
+    color: sienna;
+    font-size: 20px;
+    font-family: 'Prompt', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#Login_Form {
+    margin: 3% auto;
+}
+
+.login__field {
+    padding: 20px 0px;
+    position: relative;
+}
+
+.glyphicon {
+    position: absolute;
+    top: 30px;
+    color: #80634f;
+}
+
+.login__input {
+    border: none;
+    border-bottom: 2px solid #d4d3d1;
+    background: none;
+    padding: 10px;
+    padding-left: 24px;
+    font-weight: 700;
+    width: 40%;
+    transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+    outline: none;
+    border-bottom-color: #9e7667;
+}
+
+@media(max-width:600px) {
+    .Content a {
+        display: none;
+    }
+    .Content {
+        padding: 28% 0px;
+    }
+    .Login_Space {
+        padding: 10% 10%;
+    }
+}

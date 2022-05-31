@@ -1,0 +1,82 @@
+<title>ListStudent</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Newsreader:wght@200;400&family=Prompt:wght@300;400&display=swap" rel="stylesheet">
+
+<body>
+    <header class="Top_Header">
+
+        <div class="Logo">
+            <img src="https://elizajann.files.wordpress.com/2014/12/img_2134.png">
+        </div>
+        <div class="Bot">
+            <div class="Top_Title">
+                <h1><b>ระบบสารสนเทศ</b></h1><span>เพื่องานลงทะเบียนนักศึกษา</span>
+
+            </div>
+            <div class="Under_Title">KMUTNB REGISRATION INFORMATION SYSTEM</div>
+        </div>
+
+
+    </header>
+    <div class="Content">
+        <h3 style="font-size: 17px; text-align: center;">ผู้ใช้ : {{ stdlg.std_name }} </h3>
+        <nav class="Nav_Button">
+            <a routerLink="/AddCourse">ลงวิชาเรียน</a>&nbsp; &nbsp;
+            <a routerLink="/UnsetCourse">ถอนวิชาเรียน</a>&nbsp; &nbsp;
+            <a routerLink="/RegisResult">ผลลงทะเบียน</a>&nbsp; &nbsp;
+            <a routerLink="/StudentData">ข้อมูลนักศึกษา</a>&nbsp; &nbsp;
+            <a routerLink="/Student">ออกจากระบบ</a>
+        </nav>
+        <section class="Content_Space" style="text-align: center;">
+
+
+
+            <div id="Content_Title">ผลลงทะเบียน</div>
+            <form [formGroup]="resultForm">
+
+
+                <label style="font-size: 20px;">เทอม</label><br>
+                <input type="radio" name="term" formControlName="Term" value="1">1
+                <input type="radio" name="term" formControlName="Term" value="2">2<br>
+                <span style="color: red;" *ngIf="resultForm.get('Term')?.errors?.['required']">Plase select term</span><br>
+                <label style="font-size: 20px;">ปี</label>&nbsp;
+                <select formControlName="Year" style="font-size: 20px;">
+                      <option value='null' disabled>Choose year</option>
+                      <option value="2562">2562</option>
+                      <option value="2563">2563</option>
+                      <option value="2564">2564</option>
+                      <option value="2565">2565</option>
+                      <option value="2566">2566</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+                <span style="color: red;" *ngIf="resultForm.get('Year')?.errors?.['required']">Plase select year</span>
+                <button type="button" class="button1 button3" (click)="getclass(resultForm)"> Watch</button>
+            </form>
+            <br>
+            <br>
+            <br>
+            <div class="Table">
+                <table *ngFor="let f of table2">
+                    <thead>
+                        <th>รหัสวิชา</th>
+                        <th>ตอน</th>
+                        <th>รายวิชา</th>
+                        <th>หน่วยกิต</th>
+                        <th>วัน-เวลาเรียน</th>
+                    </thead>
+                    <tr>
+                        <td data-labe="รหัสวิชา">{{f.course_id}}</td>
+                        <td data-labe="ตอน">{{f.class_name}}</td>
+                        <td data-labe="รายวิชา">{{f.course_name}}</td>
+                        <td data-labe="หน่วยกิต">{{f.credit}}</td>
+                        <td data-labe="วัน-เวลาเรียน">{{f.day}} - {{f.starttime}} - {{f.endtime}}</td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+
+
+        </section>
+    </div>
+</body>
